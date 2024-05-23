@@ -1,0 +1,54 @@
+
+.logo {
+    margin-right: 20px;
+    /* height: 150px; */
+}
+
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    /* display: flex; */
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+#cart-icon {
+    position: relative;
+}
+
+#cart-image {
+    width: 30px;
+    vertical-align: middle;
+}
+
+#cart-value {
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}

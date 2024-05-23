@@ -1,0 +1,100 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* p {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+} */
+
+.profile-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: #333;
+    
+}
+
+.profile-icon:hover .profile-dropdown {
+    display: block;
+}
+
+.profile-dropdown li {
+    background-color: #fff;
+}
+
+.profile-dropdown li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.profile-dropdown li a:hover {
+    background-color: grey;
+}
