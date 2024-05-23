@@ -1,6 +1,6 @@
 <?php
 if (isset($_SESSION["user"])) {
-    header("Location: index.php");
+    header("Location: dashboard.php");
     exit(); 
 }
 ?>
@@ -35,19 +35,18 @@ include ('includes/header.php');
         }
         ?>
         <form action="login.php" method="post">
-        <center><h1><b>User Login</b></h1></center>
             <div class="form-group">
-                <input type="email" placeholder="Enter Email:" name="email" class="form-control" required>
+                <input type="email" placeholder="Enter Email:" name="email" class="form-control">
             </div>
             <div class="form-group">
-                <input type="password" placeholder="Enter Password:" name="password" class="form-control" required>
+                <input type="password" placeholder="Enter Password:" name="password" class="form-control">
             </div>
             <div class="form-btn">
-                <center><input type="submit" value="Login" name="login" class="btn btn-primary"></center>
+                <input type="submit" value="Login" name="login" class="btn btn-primary">
             </div>
         </form>
         <div>
-            <p>Not a User? <a href="register.php"><span style="color: blue;">Register Here</span></a></p>
+            <p>Not registered yet <a href="registration.php">Register Here</a></p>
         </div>
     </div>
 </main>

@@ -1,5 +1,6 @@
-html,
-body {
+/* General styles */
+
+html, body {
     height: 100%;
 }
 
@@ -12,89 +13,257 @@ body {
     flex-direction: column;
 }
 
+
+.container{
+    max-width: 600px;
+    margin:0 auto;
+    padding:50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.form-group{
+    margin-bottom:30px;
+}
+
+/* Main styles */
 main {
     flex: 1;
 }
 
-.container {
-    max-width: 500px;
-    margin: 0 auto;
+/* Hero section */
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.form-group {
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.hero .btn:hover {
+    background-color: #ff4500;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .hero .btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+
+/* Featured Packages */
+.featured-packages {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.featured-packages h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.form-control {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #333;
-    border-radius: 5px;
+.package {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
+.package img {
+    width: 600px;
+    height: 400px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.btn:hover {
-    background-color: #555;
+.package h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #333;
 }
 
-/* p {
+.package p {
+    font-size: 1em;
+    padding: 0 20px 20px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .package {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .package {
+        width: 90%;
+    }
+}
+
+
+/* Testimonials */
+
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
     text-align: center;
-    margin-top: 20px;
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
     color: #333;
 }
 
-a {
-    color: #333;
-    text-decoration: none;
+.testimonial-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-a:hover {
-    text-decoration: underline;
+.testimonial-image {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.testimonial-content {
+    text-align: left;
+    flex: 1;
+}
+
+.testimonial-content p {
+    margin: 0;
+    font-style: italic;
+    color: #555;
+}
+
+.customer-name {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* .testimonials {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.testimonials .testimonial {
+    margin: 10px 0;
+    font-style: italic;
 } */
 
-.profile-icon {
-    position: relative;
+/* Call to Action */
+.call-to-action {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.call-to-action h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.call-to-action .btn {
     display: inline-block;
-}
-
-.profile-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    display: none;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+    padding: 10px 20px;
     background-color: #333;
-    
-}
-
-.profile-icon:hover .profile-dropdown {
-    display: block;
-}
-
-.profile-dropdown li {
-    background-color: #fff;
-}
-
-.profile-dropdown li a {
-    display: block;
-    padding: 10px;
-    color: #fff;
+    color: white;
     text-decoration: none;
+    border-radius: 5px;
 }
 
-.profile-dropdown li a:hover {
-    background-color: grey;
+.call-to-action .btn:hover {
+    background-color: #575757;
 }
+

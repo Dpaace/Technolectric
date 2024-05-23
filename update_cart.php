@@ -7,10 +7,10 @@ if (isset($_SESSION['user']['id'])) {
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST['quantity']) && is_array($_POST['quantity'])) {
-            foreach ($_POST['quantity'] as $product_id => $quantity) {
-                $product_id = mysqli_real_escape_string($conn, $product_id);
+            foreach ($_POST['quantity'] as $package_id => $quantity) {
+                $package_id = mysqli_real_escape_string($conn, $package_id);
                 $quantity = mysqli_real_escape_string($conn, $quantity);
-                $query = "UPDATE cart SET quantity = $quantity WHERE user_id = $user_id AND product_id = $product_id";
+                $query = "UPDATE cart SET quantity = $quantity WHERE user_id = $user_id AND package_id = $package_id";
                 mysqli_query($conn, $query);
             }
             echo "Cart updated successfully.";
